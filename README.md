@@ -2,9 +2,9 @@
 
 ## Unit 1 Assignment: Globetrotter
 
-Submitted by: **NAME**
+Submitted by: **Michelle Huynh**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **7** hours spent in total
 
 Deployed Application (optional): [Globetrotter Deployed Site](ADD_LINK_HERE)
 
