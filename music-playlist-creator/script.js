@@ -186,13 +186,21 @@ function handleLike() {
     
 }
 
-createPlaylistCards(data.playlists);
-
-document.getElementsByClassName("modal-close")[0].addEventListener("click", () => {
-    const modal = document.getElementsByClassName("modal")[0];
-    modal.style.display = "none";
-
-    document.getElementsByClassName("modal-playlist")[0].remove();
+window.addEventListener("load", () => {
+    if (document.getElementsByClassName("home")[0]) {
+        createPlaylistCards(data.playlists);
+        document.getElementsByClassName("modal-close")[0].addEventListener("click", () => {
+            const modal = document.getElementsByClassName("modal")[0];
+            modal.style.display = "none";
+        
+            document.getElementsByClassName("modal-playlist")[0].remove();
+        })
+    }
+    if (document.getElementsByClassName("featured-playlist")[0]) {
+        let featuredPlaylist = chooseRandomFeaturedPlaylist(data.playlists);
+        console.log(featuredPlaylist);
+        createFeaturedPlaylist(featuredPlaylist);
+    }
 })
 
 function shufflePlaylist() {
@@ -204,4 +212,62 @@ function shufflePlaylist() {
     }
     createModal(selectedPlaylist)
     console.log(selectedPlaylist);
+}
+
+function chooseRandomFeaturedPlaylist(playlists) {
+    return playlists[Math.floor(Math.random() * playlists.length)];
+}
+
+function createFeaturedPlaylist(playlist) {
+    let featuredPlaylistDiv = document.getElementsByClassName("featured-playlist")[0];
+    let featuredPlaylistInfo = document.createElement("div");
+    featuredPlaylistInfo.classList.add("featured-playlist-info");
+    let featuredPlaylistImg = document.createElement("img");
+    featuredPlaylistImg.classList.add("featured-playlist-img");
+    featuredPlaylistImg.src = playlist.playlist_art;
+    
+    let featuredPlaylistTitle = document.createElement("h1");
+    featuredPlaylistTitle.innerText = playlist.playlist_name;
+    let featuredPlaylistCreator = document.createElement("h2");
+    featuredPlaylistCreator.innerText = playlist.playlist_creator;
+
+    featuredPlaylistInfo.appendChild(featuredPlaylistImg);
+    featuredPlaylistInfo.appendChild(featuredPlaylistTitle);
+    featuredPlaylistInfo.appendChild(featuredPlaylistCreator);
+
+    let songListDiv = document.createElement("div");
+    songListDiv.classList.add("featured-song-list");
+
+    playlist.songs.forEach(song => {
+        let songCard = document.createElement("div");
+        songCard.classList.add("song-card");
+
+        let songCardImageDiv = document.createElement("div");
+        let songCardImage = document.createElement("img");
+        songCardImage.src = song.cover_art;
+        songCardImage.classList.add("song-cover-image");
+        songCardImageDiv.appendChild(songCardImage);
+
+        let songCardInfoDiv = document.createElement("div");
+        songCardInfoDiv.classList.add("song-card-info");
+
+        let songTitle = document.createElement("h3");
+        songTitle.innerText = song.title;
+        let artistName = document.createElement("p");
+        artistName.innerText = song.artist;
+        let albumName = document.createElement("p");
+        albumName.innerText = song.album;
+
+        songCardInfoDiv.appendChild(songTitle);
+        songCardInfoDiv.appendChild(artistName);
+        songCardInfoDiv.appendChild(albumName);
+
+        songCard.appendChild(songCardImageDiv);
+        songCard.appendChild(songCardInfoDiv);
+
+        songListDiv.appendChild(songCard);
+    });
+
+    featuredPlaylistDiv.appendChild(featuredPlaylistInfo);
+    featuredPlaylistDiv.appendChild(songListDiv);
 }

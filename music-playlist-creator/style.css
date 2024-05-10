@@ -10,7 +10,7 @@ header {
     padding-left: 1em;
     padding-right: 1em;
     padding-top: .1em;
-    padding-bottom: .1em;
+    padding-bottom: 1em;
     color: #333333;
     text-align: center;
 }
@@ -171,4 +171,25 @@ i:hover {
     .playlist-cards {
         grid-template-columns: 100%;
     }
+}
+
+.featured-playlist {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.featured-playlist-img {
+    width: 300px;
+}
+.featured-playlist-info {
+    width: 50%;
+    text-align: center;
+}
+
+.featured-song-list > .song-card {
+    width: 100%;
 }
