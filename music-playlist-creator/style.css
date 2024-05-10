@@ -4,3 +4,136 @@ body {
     padding: 0;
     background-color: #f8f8f8;
 }
+
+header {
+    background-color: lightgray;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: .1em;
+    padding-bottom: .1em;
+    color: #333333;
+    text-align: center;
+}
+
+footer {
+    background-color: lightgray;
+    height: 3em;
+}
+
+.playlist-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 50px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.playlist-card {
+    border: 1px solid rgb(124, 124, 124);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    padding: 1em;
+    border-radius: 3px;
+    box-shadow: 6px 6px 17px -10px rgba(102, 102, 102, 1);
+}
+
+.playlist-card:hover {
+    box-shadow: 6px 6px 17px -10px rgb(26, 26, 26);
+    cursor: pointer;
+}
+
+.playlist-cover-image {
+    height: 200px;
+    width: 200px;
+}
+
+/* CSS for Modal */
+.modal {
+    /* display: none; */
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-playlist-data {
+    display: flex;
+    flex-direction: row;
+}
+
+.modal-playlist-title {
+    margin-left: 1em;
+}
+
+.song-list {
+    margin-top: 1em;
+}
+
+.song-card {
+    display: flex;
+    flex-direction: row;
+    background: rgb(237, 237, 237);
+    border-radius: 5px;
+    margin: 1em 0 1em 0;
+    padding-left: 1em;
+    padding-top: 1em;
+}
+
+.song-card:hover {
+    box-shadow: 6px 6px 17px -10px rgb(26, 26, 26);
+    cursor: pointer;
+}
+
+.song-cover-image {
+    width: 100px;
+    margin-right: 1em;
+}
+
+@media (width <= 1170px) {
+    .playlist-cards {
+        grid-template-columns: 2fr 2fr;
+    }
+}
+
+@media (width <= 600px) {
+    .playlist-cards {
+        grid-template-columns: 100%;
+    }
+}
