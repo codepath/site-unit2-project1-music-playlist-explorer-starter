@@ -19,9 +19,11 @@ function createPlaylistCards(playlists) {
         
         let heartIcon = document.createElement("i");
         heartIcon.classList.add('fa', 'fa-heart');
+        heartIcon.addEventListener("click", handleLike);
 
         let likeCount = document.createElement('span');
         likeCount.classList.add("like-count");
+        likeCount.id = `like-count-${playlist.playlistID}`;
         likeCount.innerText = playlist.likeCount;
 
         newPlaylistCardDiv.appendChild(playlistCoverImage);
@@ -34,16 +36,18 @@ function createPlaylistCards(playlists) {
     });
 }
 
-function clickPlaylistCard() {
-    console.log(this) // the div where listener is attached
+function clickPlaylistCard(event) {
+    if (event.target.nodeName == "I") return; // If we're clicking the heart, do something else
     const selectedID = this.getAttribute("data-playlist-id");
-    console.log(selectedID)
     let selectedPlaylist = data.playlists.filter(playlist => playlist.playlistID == selectedID)[0];
-    console.log("selectedplaylist", selectedPlaylist);
     createModal(selectedPlaylist);
 }
 
 function createModal(selectedPlaylist) {
+    if (document.getElementsByClassName("modal-playlist")[0]) {
+        document.getElementsByClassName("modal-playlist")[0].remove();
+    } 
+
     const modal = document.getElementsByClassName("modal")[0];
     modal.style.display = "block";
 
@@ -73,6 +77,12 @@ function createModal(selectedPlaylist) {
     playlistTitleDiv.appendChild(playlistCreatorName);
 
     modalPlaylistDataDiv.appendChild(playlistTitleDiv);
+
+    let shuffleButton = document.createElement("button");
+    shuffleButton.classList.add("shuffle");
+    shuffleButton.innerText = "Shuffle";
+    shuffleButton.id = `shuffle-${selectedPlaylist.playlistID}`;
+    shuffleButton.addEventListener("click", shufflePlaylist);
 
     let songListDiv = document.createElement("div");
     songListDiv.classList.add("song-list");
@@ -118,6 +128,7 @@ function createModal(selectedPlaylist) {
          */
     });
 
+    modalPlaylistDiv.appendChild(shuffleButton);
     modalPlaylistDiv.appendChild(modalPlaylistDataDiv)
     modalPlaylistDiv.appendChild(songListDiv)
 
@@ -160,6 +171,21 @@ function createModal(selectedPlaylist) {
      */
 }
 
+function handleLike() {
+    if (this.style.color === "red") {
+        // if the playlist has already been liked, do nothing
+        return;
+    };
+
+    this.style.color = "red";
+    let selectedID = this.parentNode.getAttribute("data-playlist-id");
+    let selectedPlaylist = data.playlists.filter(playlist => playlist.playlistID == selectedID)[0];
+    console.log(this.nextSibling);
+    selectedPlaylist.likeCount = selectedPlaylist.likeCount + 1;
+    document.getElementById(`like-count-${selectedID}`).innerText = selectedPlaylist.likeCount;
+    
+}
+
 createPlaylistCards(data.playlists);
 
 document.getElementsByClassName("modal-close")[0].addEventListener("click", () => {
@@ -169,16 +195,13 @@ document.getElementsByClassName("modal-close")[0].addEventListener("click", () =
     document.getElementsByClassName("modal-playlist")[0].remove();
 })
 
-// function createSongCard(song) {
-//     /**
-//      *  {
-//           "songID": 0,
-//           "title": "Nightcall",
-//           "artist": "Kavinsky",
-//           "album": "Nightcall",
-//           "cover_art": "https://picsum.photos/id/43/200",
-//           "duration": "4:18"
-//         },
-//      */
-
-// }
+function shufflePlaylist() {
+    let selectedPlaylist = data.playlists.filter(playlist => playlist.playlistID == this.id[this.id.length-1])[0];
+    console.log("before shuffle", selectedPlaylist);
+    for (let i = selectedPlaylist.songs.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [selectedPlaylist.songs[i], selectedPlaylist.songs[j]] = [selectedPlaylist.songs[j], selectedPlaylist.songs[i]];
+    }
+    createModal(selectedPlaylist)
+    console.log(selectedPlaylist);
+}
