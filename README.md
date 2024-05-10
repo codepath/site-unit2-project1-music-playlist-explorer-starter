@@ -8,18 +8,18 @@ Estimated time spent: **7** hours spent in total
 
 #### CORE FEATURES
 
-- [ x] **Home Page**
+- [x] **Home Page**
   - [x] A list of all playlists loaded from the data
-  - [ x] A modal that loads when a playlist is clicked
-  - [ x] Ability to like a playlist
-  - [ x] Responsive layout
+  - [x] A modal that loads when a playlist is clicked
+  - [x] Ability to like a playlist
+  - [x] Responsive layout
 
-- [x ] **Playlist Modal**
-  - [ x] A view of the entire playlist and songlist
-  - [ x] Ability to shuffle the songs
+- [x] **Playlist Modal**
+  - [x] A view of the entire playlist and songlist
+  - [x] Ability to shuffle the songs
 
-- [ x] **Featured Playlist Page**
-  - [ x] A randomly chosen playlist to feature
+- [x] **Featured Playlist Page**
+  - [x] A randomly chosen playlist to feature
 
 ### Walkthrough Video
 
