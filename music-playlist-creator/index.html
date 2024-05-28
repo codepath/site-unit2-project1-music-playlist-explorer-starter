@@ -15,22 +15,38 @@
         <h1 id="header-title">MyPlaylist Explorer</h1>
     </header>
     <!-- Modal Structure -->
-   <div id="playlistModal" class="modal-overlay">
-      <div class="modal-content">
-      <span class="close">&times;</span>
-      <h1 id="playlistName">Playlist Title</h1>
-      <img id="playlistImage" src="https://picsum.photos/id/45/200" alt="Festival Image">
-      <p id="songTitle">Song title</p>
-      <p id="artistName">Artist Name</p>
-      <div id="albumName">Album Name</div>
-   </div>
-
+       <div id="playlistModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <img id="playlistImage" src="https://picsum.photos/id/45/200" alt="Festival Image">
+                <div class="modal-header-info">
+                    <h1 id="playlistName">Playlist Title</h1>
+                    <h2 id="playlistCreator">created by User 001</h2>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="song">
+                    <img src="https://picsum.photos/id/43/200" alt="" class="coverArt">
+                    <div class="song-details">
+                        <p id="songTitle">Song title</p>
+                    <p id="artistName">Artist Name</p>
+                    <p id="albumName">Album Name</p>
+                    </div>
+                    <p class="song-duration">duration</p>
+                </div>
+            </div>
+        </div>
     </div>
 
      <main >
          <div class="playlist-cards">
         <div class="card">
         <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+         <div class="card-overlay">
+        <i class="fas fa-play"></i>
+        <span class="play-text">Play</span>
+       </div>
         <div class="card-body">
             <h5 class="card-title">Playlist Title</h5>
             <p class="card-text">Creator Name</p>
@@ -39,6 +55,10 @@
       </div>
         <div class="card">
         <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+         <div class="card-overlay">
+        <i class="fas fa-play"></i>
+        <span class="play-text">Play</span>
+       </div>
         <div class="card-body">
             <h5 class="card-title">Playlist Title</h5>
             <p class="card-text">Creator Name</p>
@@ -47,6 +67,10 @@
       </div>
         <div class="card">
         <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+         <div class="card-overlay">
+        <i class="fas fa-play"></i>
+        <span class="play-text">Play</span>
+       </div>
         <div class="card-body">
             <h5 class="card-title">Playlist Title</h5>
             <p class="card-text">Creator Name</p>
@@ -55,6 +79,10 @@
       </div>
         <div class="card">
         <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+         <div class="card-overlay">
+        <i class="fas fa-play"></i>
+        <span class="play-text">Play</span>
+       </div>
         <div class="card-body">
             <h5 class="card-title">Playlist Title</h5>
             <p class="card-text">Creator Name</p>
@@ -63,6 +91,10 @@
       </div>
         <div class="card">
         <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+         <div class="card-overlay">
+        <i class="fas fa-play"></i>
+        <span class="play-text">Play</span>
+       </div>
         <div class="card-body">
             <h5 class="card-title">Playlist Title</h5>
             <p class="card-text">Creator Name</p>
@@ -71,6 +103,10 @@
       </div>
         <div class="card">
         <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+         <div class="card-overlay">
+        <i class="fas fa-play"></i>
+        <span class="play-text">Play</span>
+       </div>
         <div class="card-body">
             <h5 class="card-title">Playlist Title</h5>
             <p class="card-text">Creator Name</p>
@@ -79,6 +115,10 @@
       </div>
         <div class="card">
         <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+         <div class="card-overlay">
+        <i class="fas fa-play"></i>
+        <span class="play-text">Play</span>
+       </div>
         <div class="card-body">
             <h5 class="card-title">Playlist Title</h5>
             <p class="card-text">Creator Name</p>
@@ -87,6 +127,10 @@
       </div>
         <div class="card">
         <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+         <div class="card-overlay">
+        <i class="fas fa-play"></i>
+        <span class="play-text">Play</span>
+       </div>
         <div class="card-body">
             <h5 class="card-title">Playlist Title</h5>
             <p class="card-text">Creator Name</p>
@@ -98,8 +142,7 @@
       
     </main>
     <footer>
-        <!-- Your footer content here -->
-        <p>MyPlaylist</p>
+        <p>MyPlaylist Explorer</p>
     </footer>
     <script src="data/data.js"></script>
     <script src="script.js"></script>

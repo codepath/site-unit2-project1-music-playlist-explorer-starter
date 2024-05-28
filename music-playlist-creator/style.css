@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Shadows+Into+Light+Two&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -28,6 +30,7 @@ header{
     padding: 10px 20px;
     color: #f8f8f8;
     font-weight: 200;
+     font-family: "Rubik", sans-serif;
 
 }
 
@@ -65,19 +68,72 @@ main{
     object-fit: cover;
 }
 
-.card-body {
-    padding:  0 20px;
-}
+
 
 .card-title {
     font-size: 1.25rem;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+.card-review i {
+    margin: 10px;
 }
 
 .card-text {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
+/* Overlay for each card  */
+
+.card {
+    position: relative; 
+    max-width: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 20px;
+    padding: 20px;
+}
+
+.card-img-top {
+    max-width: 100%;
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.card:hover .card-overlay {
+    opacity: 1; 
+}
+
+.card-overlay i {
+    font-size: 2rem;
+    color: white;
+}
+
+.play-text {
+    color: white;
+    font-size: 1rem;
+    margin-top: 10px;
+}
 
 footer{
     display: flex;
@@ -86,6 +142,7 @@ footer{
     color: #f8f8f8;
     padding: 10px 0;
     margin-top: auto;
+     font-family: "Rubik", sans-serif;
 }
 
 
@@ -106,8 +163,9 @@ footer{
    background-color: #fefefe;
    margin: 15% auto; /* 15% from the top and centered */
    padding: 20px;
-   border: 1px solid #888;
-   width: 80%; /* Could be more or less, depending on screen size */
+   border: 1px solid #76c8b1;
+   border-radius: 8px;
+   width: 80%; 
 }
 .close {
    color: #aaa;
@@ -120,6 +178,73 @@ footer{
    color: black;
    text-decoration: none;
    cursor: pointer;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px; /* Space below header */
+}
+
+#playlistImage {
+    width: 150px; /* Adjust image size as needed */
+    height: 150px;
+    border-radius: 8px; /* Rounded corners for the image */
+    margin-right: 20px; /* Space between image and text */
+}
+
+.modal-header-info {
+    display: flex;
+    flex-direction: column;
+}
+
+#playlistName {
+    font-size: 24px;
+    margin-bottom: 5px; /* Space below playlist title */
+}
+
+#playlistCreator {
+    font-size: 18px;
+    color: #EAD751 
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    background-color: #dfdadaa7;
+    border-radius: 8px;
+   
+}
+
+.song {
+     display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+     margin: 0 10px;
+     padding: 10px;
+}
+
+.coverArt {
+    width: 100px; 
+    height: 100px;
+    border-radius: 8px; 
+    margin-right: 10px; 
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.song-details p {
+    margin: 0; 
+    padding: 2px 0; 
+}
+
+.song-duration {
+    font-size: 14px;
+    color: #979797; 
+    margin-left: 400px; 
 }
 
 @media (max-width: 768px) {
