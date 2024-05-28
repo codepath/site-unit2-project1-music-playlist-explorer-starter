@@ -60,8 +60,8 @@ let data = { "playlists": [
           "title": "One Dance",
           "artist": "Drake",
           "album": "Views",
-          "cover_art": "https://picsum.photos/id/21/200,
-          "duration": "2:53"
+          "cover_art": "https://picsum.photos/id/21/200",
+          "duration": "2:53",
         },
         {
           "songID": 6,

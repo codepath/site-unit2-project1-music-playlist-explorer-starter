@@ -6,20 +6,100 @@
     
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
+    <header >
         <!-- Your header content here -->
+        <h1 id="header-title">MyPlaylist Explorer</h1>
     </header>
+    <!-- Modal Structure -->
+   <div id="playlistModal" class="modal-overlay">
+      <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1 id="playlistName">Playlist Title</h1>
+      <img id="playlistImage" src="https://picsum.photos/id/45/200" alt="Festival Image">
+      <p id="songTitle">Song title</p>
+      <p id="artistName">Artist Name</p>
+      <div id="albumName">Album Name</div>
+   </div>
 
-    <main> 
-        <!-- Your main content here -->
+    </div>
+
+     <main >
+         <div class="playlist-cards">
+        <div class="card">
+        <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+            <h5 class="card-title">Playlist Title</h5>
+            <p class="card-text">Creator Name</p>
+            <div class="card-review"><i class="fa-regular fa-heart"></i>5</div>
+        </div>
+      </div>
+        <div class="card">
+        <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+            <h5 class="card-title">Playlist Title</h5>
+            <p class="card-text">Creator Name</p>
+            <div class="card-review"><i class="fa-regular fa-heart"></i>5</div>
+        </div>
+      </div>
+        <div class="card">
+        <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+            <h5 class="card-title">Playlist Title</h5>
+            <p class="card-text">Creator Name</p>
+            <div class="card-review"><i class="fa-regular fa-heart"></i>5</div>
+        </div>
+      </div>
+        <div class="card">
+        <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+            <h5 class="card-title">Playlist Title</h5>
+            <p class="card-text">Creator Name</p>
+            <div class="card-review"><i class="fa-regular fa-heart"></i>5</div>
+        </div>
+      </div>
+        <div class="card">
+        <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+            <h5 class="card-title">Playlist Title</h5>
+            <p class="card-text">Creator Name</p>
+            <div class="card-review"><i class="fa-regular fa-heart"></i>5</div>
+        </div>
+      </div>
+        <div class="card">
+        <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+            <h5 class="card-title">Playlist Title</h5>
+            <p class="card-text">Creator Name</p>
+            <div class="card-review"><i class="fa-regular fa-heart"></i>5</div>
+        </div>
+      </div>
+        <div class="card">
+        <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+            <h5 class="card-title">Playlist Title</h5>
+            <p class="card-text">Creator Name</p>
+            <div class="card-review"><i class="fa-regular fa-heart"></i>5</div>
+        </div>
+      </div>
+        <div class="card">
+        <img src="https://picsum.photos/id/43/200" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+            <h5 class="card-title">Playlist Title</h5>
+            <p class="card-text">Creator Name</p>
+            <div class="card-review"><i class="fa-regular fa-heart"></i>5</div>
+        </div>
+      </div>
+      </div>
+  
+      
     </main>
-
     <footer>
         <!-- Your footer content here -->
+        <p>MyPlaylist</p>
     </footer>
     <script src="data/data.js"></script>
     <script src="script.js"></script>
