@@ -43,8 +43,6 @@ const createPlaylistCards = () => {
   });
 }
 
-
-
 // Open modal function
 const openModal = (playlist) => {
   const modal = document.getElementById("playlistModal");
@@ -88,7 +86,7 @@ const shuffleSongs = (playlist) => {
     // Data model- shuffled
     // console.log("Playlist",playlist.songs)
 };
-  // Show default playlist
+  // Show playlist
   shuffleSongs(playlist);
 
 };
@@ -107,7 +105,7 @@ modal.addEventListener("click", (event) => {
   }
 });
 
-// Call the function to create playlist cards
+// create playlist cards
 createPlaylistCards(data.playlists); 
 
 
@@ -115,6 +113,8 @@ createPlaylistCards(data.playlists);
 
 
 
+
+/* test code to open and close modal*/
 // const modal = document.getElementById("playlistModal");
 // const closeButton = document.querySelector(".close");
 

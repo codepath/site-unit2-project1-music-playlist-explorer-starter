@@ -30,9 +30,47 @@ header{
     padding: 10px 20px;
     color: #f8f8f8;
     font-weight: 200;
-     font-family: "Rubik", sans-serif;
+    font-family: "Rubik", sans-serif;
 
 }
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+  justify-content: center;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  background-color: #EAD751;
+}
+
 
 main{
     display: flex;
@@ -305,12 +343,126 @@ footer{
     margin-left: auto; 
 }
 
+
+
+
+/* Featured Playlist page */
+
+.main-content {
+  flex: 1;
+}
+
+
+.featured-main{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  
+}
+
+.featured-title {
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 20px;
+}
+
+.featured-playlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px 20px;
+}
+
+.featured-left, .featured-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.featured-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.featured-left h2, .featured-left h4 {
+  text-align: center;
+}
+
+.featured-left h4{
+    color: #EAD751;
+    font-weight: 200;
+}
+
+.song-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.song-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.song-details {
+  flex-grow: 1;
+}
+
+.song-title {
+  margin: 0;
+  font-weight: bold;
+}
+
+.song-artist {
+  margin: 0;
+  color: #555;
+}
+
+.song-duration {
+  font-weight: bold;
+  color: #333;
+}
+
+.featured-footer{
+ text-align: center;
+  padding: 10px 0;
+  margin-top: 18rem;
+}
+
+
+
+
 @media (max-width: 768px) {
     .playlist-cards {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         width: 50%;
     }
+
+    .featured-playlist {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .featured-left, .featured-right {
+    min-width: 100%;
+  }
 
   
 }
