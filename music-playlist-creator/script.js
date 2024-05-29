@@ -28,7 +28,6 @@ const createPlaylistCards = () => {
       openModal(playlist);
     });
 
-    
     // Add event listener to like icon
     const likeIcon = card.querySelector(".card-like-icon");
     likeIcon.addEventListener("click", (event) => {
@@ -39,15 +38,15 @@ const createPlaylistCards = () => {
       likeCountElement.textContent = playlist.likeCount;
       // Toggle clicked class for styling
       likeIcon.classList.toggle("clicked");
-    
     });
+   
   });
 }
 
 
 
 // Open modal function
-const  openModal = (playlist)=> {
+const openModal = (playlist) => {
   const modal = document.getElementById("playlistModal");
   modal.style.display = "block";
 
@@ -58,23 +57,41 @@ const  openModal = (playlist)=> {
   ).textContent = `created by ${playlist.playlist_creator}`;
 
   const modalBody = modal.querySelector(".modal-body");
-  modalBody.innerHTML = ""; 
+  modalBody.innerHTML = "";
 
-  playlist.songs.forEach((song) => {
-    const songDiv = document.createElement("div");
-    songDiv.className = "song";
-    songDiv.innerHTML = `
-            <img src="${song.cover_art}" alt="" class="coverArt">
-            <div class="song-details">
-                <p id="songTitle">${song.title}</p>
-                <p id="artistName">${song.artist}</p>
-                <p id="albumName">${song.album}</p>
-            </div>
-            <p class="song-duration">${song.duration}</p>
-        `;
-    modalBody.appendChild(songDiv);
-  });
-}
+  //   add event listener to shuffle button
+  const shuffleButton = document.getElementById("shuffleButton");
+  shuffleButton.addEventListener("click", () => {
+    shuffleSongs(playlist);
+});
+
+// function to shuffle songs in playlist
+const shuffleSongs = (playlist) => {
+    playlist.songs.sort(() => Math.random() - 0.5);
+    const modalBody = document.querySelector(".modal-body");
+    modalBody.innerHTML = "";
+
+    playlist.songs.forEach((song) => {
+      const songDiv = document.createElement("div");
+      songDiv.className = "song";
+      songDiv.innerHTML = `
+    <img src="${song.cover_art}" alt="" class="coverArt">
+    <div class="song-details">
+    <p id="songTitle">${song.title}</p>
+    <p id="artistName">${song.artist}</p>
+    <p id="albumName">${song.album}</p>
+    </div>
+    <p class="song-duration">${song.duration}</p>
+    `;
+      modalBody.appendChild(songDiv);
+    });
+    // Data model- shuffled
+    // console.log("Playlist",playlist.songs)
+};
+  // Show default playlist
+  shuffleSongs(playlist);
+
+};
 
 // Close modal button
 const closeButton = document.querySelector(".close");
