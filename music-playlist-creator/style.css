@@ -83,6 +83,23 @@ main{
     margin-bottom: 10px;
 }
 
+.card-like-icon {
+    color: #aaa;
+    transition: color 0.3s ease; 
+}
+
+.card-like-icon:hover {
+    color: #ff6b6b; 
+}
+
+.card-like-icon.clicked {
+    color: #ff6b6b; 
+}
+
+
+
+
+
 /* Overlay for each card  */
 
 .card {

@@ -15,7 +15,10 @@ const createPlaylistCards = () => {
             <div class="card-body">
                 <h5 class="card-title">${playlist.playlist_name}</h5>
                 <p class="card-text">${playlist.playlist_creator}</p>
-                <div class="card-review"><i class="fa-regular fa-heart"></i>${playlist.likeCount}</div>
+                <div class="card-review">
+                <i class="fa-regular fa-heart card-like-icon" ></i>
+                <span>${playlist.likeCount}</span>
+                </div>
             </div>
         `;
     container.appendChild(card);
@@ -23,6 +26,20 @@ const createPlaylistCards = () => {
     const overlay = card.querySelector(".card-overlay");
     overlay.addEventListener("click", () => {
       openModal(playlist);
+    });
+
+    
+    // Add event listener to like icon
+    const likeIcon = card.querySelector(".card-like-icon");
+    likeIcon.addEventListener("click", (event) => {
+      event.stopPropagation();
+      playlist.likeCount++;
+      // Update like count on card
+      const likeCountElement = card.querySelector(".card-review span");
+      likeCountElement.textContent = playlist.likeCount;
+      // Toggle clicked class for styling
+      likeIcon.classList.toggle("clicked");
+    
     });
   });
 }
