@@ -11,15 +11,42 @@
 </head>
 <body>
     <header>
-        <!-- Your header content here -->
+        <h1>Music Playlist Explorer</h1>
     </header>
 
     <main> 
-        <!-- Your main content here -->
+        <div class="playlist-cardS"></div>
+
+        <!-- Modal Structure -->
+        <div id="playlistModal" class="modal">
+            <div class="modal-content">
+                <div class="playlist-title">
+                    <img id="playlist-img" src="assets/img/playlist.png" alt="PLaylist Image">
+                    <div class="title-text">
+                        <h1 id="playlist-name">Playlist Name</h1>
+                        <h2 id="creators-name">Creator Name</h2>
+                    </div>
+                    <span class="exit">&times;</span>
+                </div>
+
+                <div class="songs">
+                    <div class="song">
+                        <img id='song-img' src="assets/img/song.png" alt="Song Image">
+                        <div class="song-title-text">
+                            <h3 class="title-text">Song Title</h3>
+                            <h4 id="artist-name">Artist Name</h4>
+                            <h4 id="album-name">Album Name</h4>
+                        </div>
+                        <p id="song-duration">0:00</p>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
     </main>
 
     <footer>
-        <!-- Your footer content here -->
+        <p>Copyright &copy; 2024 Meta U</p>
     </footer>
     <script src="data/data.js"></script>
     <script src="script.js"></script>
