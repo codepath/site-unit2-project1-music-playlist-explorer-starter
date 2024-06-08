@@ -26,14 +26,17 @@
                         <h1 id="playlist-name">Playlist Name</h1>
                         <h2 id="creators-name">Creator Name</h2>
                     </div>
-                    <span class="exit">&times;</span>
+                    <div class="modal-icons">
+                        <span class="exit">&times;</span>
+                        <button class="shuffle" >Shuffle</button>
+                    </div>;
                 </div>
 
                 <div class="songs">
                     <div class="song">
                         <img id='song-img' src="assets/img/song.png" alt="Song Image">
                         <div class="song-title-text">
-                            <h3 class="title-text">Song Title</h3>
+                            <h3 id='song-title' class="title-text">Song Title</h3>
                             <h4 id="artist-name">Artist Name</h4>
                             <h4 id="album-name">Album Name</h4>
                         </div>
@@ -48,7 +51,8 @@
     <footer>
         <p>Copyright &copy; 2024 Meta U</p>
     </footer>
-    <script src="data/data.js"></script>
+    <script src="data/data.js" ></script>
     <script src="script.js"></script>
 </body>
 </html>
+
