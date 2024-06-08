@@ -50,7 +50,7 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
+`TODO://` https://drive.google.com/file/d/15xLSIuFHmwIA-0dOwBdhdtnIgM8JTVFl/view?usp=sharing
 
 `ADD_EMBEDDED_CODE_HERE`
 
@@ -58,15 +58,16 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+Yes, the topics discussed in the labs helped me complete the assignment. Specifically, the tomato timer lab helped me understand how to use javascript to handle events and make the website more dynamic. There was no feature I felt particularly unprepared to complete, I felt I had the tools to complete all of them. However, rendering the playlists from the json file was initially more challenging. 
+I was also unprepared on uploading the video file to github as I keep running into an error saying github does not allow the file size.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+If I had more time I would take the opportunity to clean up my code more. I had a lot of styling in different places which became confusing after a while. I would have also wanted to add the remaining stretch features such as adding a new playlist.
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+My project demo went well and all my features worked as expected. However I was still in the middle of working on my search feature. I originally made my search feature so that it searches upon clicking enter and I was in the process of adding a button to go back to view all playlists. However, I saw that my peers has implemented search such that the page searches upon key up. This way all the playlists can be seen by backspacing the search bar completely, removing the need to add a button to go back. This saved me time on continuing to work on my project. I also saw that another one of my peers had a pixelated background. This inspired me to be even more creative with styling moving forward and adding more dimension to my websites.
 
 ### Open-source libraries used
 
@@ -74,4 +75,4 @@ Add your response here
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Bryan helped me spot a bug on the third day of work that I had been stuck on for a while. He was very helpful and took the time to look through my code with me and spotted that I was accessing the json version of an element rather than the html version which is why my changes were not showing up on the website.
