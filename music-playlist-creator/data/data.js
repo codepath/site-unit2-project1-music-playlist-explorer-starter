@@ -60,7 +60,7 @@ let data = { "playlists": [
           "title": "One Dance",
           "artist": "Drake",
           "album": "Views",
-          "cover_art": "https://picsum.photos/id/21/200,
+          "cover_art": "https://picsum.photos/id/21/200",
           "duration": "2:53"
         },
         {
@@ -151,7 +151,7 @@ let data = { "playlists": [
       "playlist_name": "Road Trip Anthems",
       "playlist_creator": "Playlist Pioneer",
       "playlist_art": "https://picsum.photos/id/314/200",
-      "likeCount": 0,
+      "likeCount": 5,
       "songs": [
         {
           "songID": 15,
