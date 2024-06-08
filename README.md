@@ -2,7 +2,7 @@
 
 Submitted by: **Tessa Orozco**
 
-Estimated time spent: **#** hours spent in total
+Estimated time spent: **22** hours spent in total
 
 Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
 
@@ -42,8 +42,8 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
   - [x ] Add a delete button to each playlist tile.
   - [ x] When clicked, the playlist is removed from the display and data model.
 
-- [ ] **Search Functionality**
-  - [ ] Implement a search bar that allows users to filter playlists by name or creator.
+- [ x] **Search Functionality**
+  - [ x] Implement a search bar that allows users to filter playlists by name or creator.
 
 - [ ] **Sorting Options**
   - [ ] Implement a dropdown or button options that allow users to sort the playlist by name, number of likes, or date added.
