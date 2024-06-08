@@ -1,5 +1,3 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Unit 2 Assignment: Music Playlist Explorer
 
 Submitted by: **NAME**
@@ -12,22 +10,22 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 #### CORE FEATURES
 
-- [ ] **Display Playlists**
-  - [ ] Dynamically render playlists on the homepage using JavaScript.
-  - [ ] Fetch data from a provided JSON file and use it to create interactive playlist tiles.
-  - [ ] Each title should display the playlist's cover image, name, creator, and like count.
+- [x] **Display Playlists**
+  - [x] Dynamically render playlists on the homepage using JavaScript.
+  - [x] Fetch data from a provided JSON file and use it to create interactive playlist tiles.
+  - [x] Each title should display the playlist's cover image, name, creator, and like count.
 
-- [ ] **Playlist Details**
-  - [ ] Create a modal view that displays detailed information about a playlist when a user clicks on a playlist tile.
-  - [ ] The modal should show the playlist's cover image, name, creator, and a list of songs, including their titles, artists, and durations.
+- [x] **Playlist Details**
+  - [x] Create a modal view that displays detailed information about a playlist when a user clicks on a playlist tile.
+  - [x] The modal should show the playlist's cover image, name, creator, and a list of songs, including their titles, artists, and durations.
 
-- [ ] **Like Playlists**
-  - [ ] Implement functionality to allow users to like playlists by clicking a heart icon on each playlist tile.
-  - [ ] Update the like count on the playlist tile when a playlist is liked or unliked.
+- [x] **Like Playlists**
+  - [x] Implement functionality to allow users to like playlists by clicking a heart icon on each playlist tile.
+  - [x] Update the like count on the playlist tile when a playlist is liked or unliked.
 
-- [ ] **Shuffle Songs**
-  - [ ] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist detail modal.
-  - [ ] Rearrange the songs in the modal view when the shuffle button is clicked.
+- [x] **Shuffle Songs**
+  - [x] Enable users to shuffle the songs within a playlist using a shuffle button in the playlist detail modal.
+  - [x] Rearrange the songs in the modal view when the shuffle button is clicked.
 
 #### STRETCH FEATURES
 
