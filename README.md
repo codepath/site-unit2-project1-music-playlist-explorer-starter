@@ -50,7 +50,7 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
+`TODO://` Add the embedded URL code to your animated app walkthrough below, ``. Make sure the video actually renders and is playable when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
 
 `ADD_EMBEDDED_CODE_HERE`
 
@@ -58,15 +58,15 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 * Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+I felt most unprepared for the Javascript portion of the assignment, at first I struggled with Lab 3 and then was able to walk through the steps and get most of it,  but I feel like that was just a little chunk of the entire knowledge we needed for the assignment. 
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
   
-Add your response here
+If I had more time I would have definetely completed the add new, edit, and delete playlist stretch goals, because i think those would have been quite simple after I now have a bit of a hang of the javascript. I would have also done better with my css, but I decided to focus more of my time on the Javascript because I was learning it for the first time and it was more difficult for me 
 
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+I personally didn't do a demo, but I enjoyed looking at what other people did, definetely motivated me to do more next week.
 
 ### Open-source libraries used
 
@@ -75,3 +75,4 @@ Add your response here
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Shout out to Makayla, George, Bryan and Boris. They were really helpful. 
