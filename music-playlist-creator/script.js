@@ -4,11 +4,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // function to populate playlists using data from json file and displaying on screen
     function addPlaylist(playlist) {
         let cardContainer = document.getElementsByClassName('playlist-cardS')[0];
-        if (cardContainer) {
-            cardContainer.appendChild(newCard);
-        } else {
-            console.log('Card container not found');
-        }
         let newCard = document.createElement('div');
         newCard.classList.add("playlist-card");
         newCard.innerHTML = `
