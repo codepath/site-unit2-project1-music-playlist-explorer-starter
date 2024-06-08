@@ -15,17 +15,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
             const songElement = document.createElement('div');
             songElement.classList.add('song');
             songElement.id = "featured-song-display";
-            console.log(songElement);
+            
 
             songElement.innerHTML = `
                 <img id="song-img" src="${song.cover_art}" alt="${song.title}">
                 <div class="song-title-text">
-                    <h3 class="title-text" id="song-title'>${song.title}</h3>
+                    <h3 class="title-text" id="song-title">${song.title}</h3>
                     <h4 id='artist-name'>${song.artist}</h4>
                     <h4 id='album-name'>${song.album}</h4>
                 </div>
             <p class="song-duration">${song.duration}</p>
             `;
+            console.log(songElement);
             playlistDisplay.appendChild(songElement);
         });
         featuredDisplay.appendChild(playlistDisplay);
