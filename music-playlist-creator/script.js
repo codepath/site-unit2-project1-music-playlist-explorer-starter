@@ -1,10 +1,14 @@
 document.addEventListener('DOMContentLoaded', (event) => {
     let playlistModal = document.getElementById("playlistModal");
 
-    
     // function to populate playlists using data from json file and displaying on screen
     function addPlaylist(playlist) {
         let cardContainer = document.getElementsByClassName('playlist-cardS')[0];
+        if (cardContainer) {
+            cardContainer.appendChild(newCard);
+        } else {
+            console.log('Card container not found');
+        }
         let newCard = document.createElement('div');
         newCard.classList.add("playlist-card");
         newCard.innerHTML = `
@@ -17,15 +21,20 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 <span class='like-count' id='like-count' data-playlist-id='${playlist.playlistID}'>${playlist.likeCount}</span>
             </span>
         `;
-
         cardContainer.appendChild(newCard);
     };
+
+    
 
     // for loop to call addPLaylists function
     let playlists = data.playlists;
     playlists.forEach(item => {
         addPlaylist(item)
     });
+
+    
+
+    // let playlistImage = document.createElement('img').src
 
     // function to populate modal using data from json file and displaying on screen
     function populateModal(playlistId) {
@@ -37,7 +46,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
         modal.querySelector('#playlist-img').alt = playlist.playlist_name;
         modal.querySelector('#playlist-name').textContent = playlist.playlist_name;
         modal.querySelector('#creators-name').textContent = playlist.playlist_creator;
-    
+        shuffleButton.setAttribute('data-playlist-id', `${playlist.playlistID}`);
+        
         // Clear existing songs
         const songsContainer = modal.querySelector('.songs');
         songsContainer.innerHTML = '';
@@ -60,6 +70,42 @@ document.addEventListener('DOMContentLoaded', (event) => {
             songsContainer.appendChild(songElement);
         });
     };
+
+    function populateShuffledModal(playlistId, shuffledPlaylist) {
+        const playlist = data.playlists.find(p => p.playlistID === playlistId);
+
+        // Update playlist information
+        const modal = document.getElementById('playlistModal');
+        modal.querySelector('#playlist-img').src = playlist.playlist_art;
+        modal.querySelector('#playlist-img').alt = playlist.playlist_name;
+        modal.querySelector('#playlist-name').textContent = playlist.playlist_name;
+        modal.querySelector('#creators-name').textContent = playlist.playlist_creator;
+
+        // Clear existing songs
+        const songsContainer = modal.querySelector('.songs');
+        songsContainer.innerHTML = '';
+        console.log(songsContainer);
+
+        // Add songs to the modal
+        shuffledPlaylist.forEach(song => {
+            const songElement = document.createElement('div');
+            songElement.classList.add('song');
+    
+            songElement.innerHTML = `
+                <img class='song-img' src="${song.cover_art}" alt="${song.title}">
+                <div class="song-title-text">
+                    <h3 class="title-text" id='modal-song-title'>${song.title}</h3>
+                    <h4 class="artist-name">${song.artist}</h4>
+                    <h4 class="album-name">${song.album}</h4>
+                </div>
+                <p class="song-duration">${song.duration}</p>
+            `;
+    
+            songsContainer.appendChild(songElement);
+        });
+    }
+
+
     
     // loop to open modal when the + icon is clicked 
     // get icon
@@ -108,6 +154,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         return likeCount.textContent;
     }
 
+    // function saveData(data) {
+    //     localStorage.setItem('playlistData', JSON.stringify(data));
+    // }
+
     
         // to like playlist 
         // get like icon
@@ -124,20 +174,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
                 playlistId = Number(event.target.getAttribute('data-playlist-id'));
                 newCount = likePlaylist(playlistId);
                 // console.log(newCount);
-                playlists.likeCount = newCount;
-
-            
-            const file_path = 'data/data.js'; 
-            fetch(file_path)
-                .then(response => response.json())
-                .then(data => {
-                    console.log(data);
-                })
-                .catch(error => console.error('Error loading JSON:', error));
-        })
+                data.playlists[playlistId].likeCount = newCount;
+        });
     });
 
+            // console.log(data.playlists[0].likeCount);
 
+
+        // random number generator to 
 
         // generate random number
         function getRandomInt(max) {
@@ -149,13 +193,45 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
         // generate a random number between 0 and length of the songs list - 1
-        // do this for every song container,
         // once this is done, you update the songID to the new generated number
-        // display songs in order according to their songId
+        // display songs in order according to their Ids
+
+
+        function shuffleArray(array) {
+            let current = array.length, tempValue, random;
+
+            // While there remain elements to shuffle...
+            while (0 !== current) {
+
+                // Pick a remaining element...
+                random = Math.floor(Math.random() * current);
+                current -= 1;
+
+                // And swap it with the current element.
+                tempValue = array[current];
+                array[current] = array[random];
+                array[random] = tempValue;
+            }
+            return array;
+        }
+
+        
+        let shuffleButton = document.querySelector('.shuffle');
+        shuffleButton.addEventListener('click', (event) => {
+            let playlistId = Number(event.target.getAttribute('data-playlist-id'));
+            const playlist = data.playlists.find(p => p.playlistID === playlistId);
+            if (playlist) {
+                const songsCopy = [...playlist.songs]; 
+                const shuffledSongs = shuffleArray(songsCopy); 
+                // console.log(shuffledSongs);
+
+                populateShuffledModal(playlistId, shuffledSongs);
+            };
+        })
+
 
     
-
-
+    
 
     // DEBUG TIP: created to function to check if script runs twice
     // function ValidateHidePrivate() {
