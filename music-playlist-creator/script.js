@@ -3,6 +3,7 @@ const closeM = document.getElementById("close");
 const modalCont = document.getElementById('modal-content');
 const cards = data.playlists;
 const ftPage = document.getElementById('ftPlay');
+const overlay = document.getElementById('overlay');
 
 document.addEventListener('DOMContentLoaded', () => {
     const pathname = document.location.pathname;
@@ -39,6 +40,7 @@ function openModal(card) {
         modalCont.querySelector("#songs").appendChild(songFormat);
     })
     modal.style.display = "block";
+    overlay.style.display = 'block';
  }
 
  function shuffle(modalPage) {
@@ -68,6 +70,7 @@ function openModal(card) {
 
  function closeModal() {
     modal.style.display = "none";
+    overlay.style.display = 'none';
  }
 
  closeM.addEventListener('click', closeModal);

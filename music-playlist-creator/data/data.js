@@ -4,7 +4,7 @@ let data = { "playlists": [
       "playlist_name": "Late Night Drive",
       "playlist_creator": "Melody Maven",
       "playlist_art": "https://picsum.photos/id/36/200",
-      "likeCount": 0,
+      "likeCount": 1,
       "songs": [
         {
           "songID": 0,
@@ -102,7 +102,7 @@ let data = { "playlists": [
       "playlist_name": "Workout Beats",
       "playlist_creator": "Harmony Herald",
       "playlist_art": "https://picsum.photos/id/1077/200",
-      "likeCount": 0,
+      "likeCount": 3,
       "songs": [
         {
           "songID": 10,
@@ -298,7 +298,7 @@ let data = { "playlists": [
       "playlist_name": "90's R&B",
       "playlist_creator": "Vinyl Virtuoso",
       "playlist_art": "https://picsum.photos/id/815/200",
-      "likeCount": 0,
+      "likeCount": 4,
       "songs": [
         {
           "songID": 30,
