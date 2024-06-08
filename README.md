@@ -50,7 +50,7 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 ### Walkthrough Video
 
-`[ADD_EMBEDDED_CODE_HERE](https://youtu.be/xkTm3y20288?si=t9KR5Q2cKHwDHklQ)`
+`(https://youtu.be/xkTm3y20288?si=t9KR5Q2cKHwDHklQ)`
 
 ### Reflection
 
