@@ -50,7 +50,7 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 ### Walkthrough Video
 
-`TODO://` https://drive.google.com/file/d/15xLSIuFHmwIA-0dOwBdhdtnIgM8JTVFl/view?usp=sharing
+`TODO://` https://www.loom.com/share/2cb2227399734b6e813236ace14652a3?sid=7f858a50-ad92-481d-9418-0021ca994aaf
 
 `ADD_EMBEDDED_CODE_HERE`
 
