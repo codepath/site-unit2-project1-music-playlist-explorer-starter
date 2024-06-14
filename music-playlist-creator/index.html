@@ -10,16 +10,57 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="cardModal" class="modal-overlay">
+        <p id="close">&times;</p>
+        <div id="modal-content">
+        </div>
+    </div>
     <header>
-        <!-- Your header content here -->
+        <div class="pHead">
+            <div id="pageTitle">
+                <h1>Music Playlist Explorer</h1>
+            </div>
+        </div>
+        </div>
+        <div style="text-align: center; background-color: rgb(255, 247, 240)">
+        <a class="featLink" href="featured.html" title="Link" style="
+        text-decoration: none;
+        margin-bottom: 8px;
+        font-size: 1.5em;
+        background-image: linear-gradient(45deg, 
+        #ff0000, /* Red */
+        #ff3c00, /* Green */
+        #ff7f00, /* Orange */
+        #ffa200, /* Yellow */
+        #ffc400, /* Green */
+        #ffc400, /* Green */
+        #ffe600, /* Green */
+        #60e700, /* Green */
+        #0099ff, /* Green */
+        #0000ff, /* Blue */
+        #4b0082, /* Indigo */
+        #9400d3  /* Violet */);
+        -webkit-text-fill-color: white;
+        transition: color 0.3s, background 0.3s, background-position 0.5s;
+        padding: 5px;
+        box-shadow: 2px 2px 5px rgba(203, 64, 0, 0.798);
+        border-radius: 3px;
+        background-size: 200% auto;
+        font-weight: bold;">view featured playlist!</a>
+        </div>
     </header>
 
-    <main> 
-        <!-- Your main content here -->
+    <main id="exploreMain"> 
+        <input id="searchbar" onkeyup="search_playlist()" type="text" name="search" placeholder="Search playlists.."
+        style="margin-bottom: 10px;">
+        <container id="playlist-cards">
+        </container>
     </main>
 
+    <div id="overlay"></div>
+
     <footer>
-        <!-- Your footer content here -->
+        <p id="footText">Made by Tessa Orozco</p>
     </footer>
     <script src="data/data.js"></script>
     <script src="script.js"></script>
