@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Music Playlist Explorer</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Music Playlist Explorer</h1>
+    </header>
+
+    <main> 
+        <div class="featured-display">
+            <div class="album-display">
+                <img class='album-img' src="assets/img/playlist.png" alt="Album Cover">
+                <h2 class="album-title">Album Title</h2>
+                <h3 class="playlist-creator">Creator Name</h3>
+            </div>
+
+            <div class="playlist-display">
+                <div class="song" id="featured-song-display">
+                    <img id="song-img" src="assets/img/song.png" alt="Song Image">
+                    <div class="song-title-text">
+                        <h3 id='song-title' class="title-text">Song Title</h3>
+                        <h4 id="artist-name">Artist Name</h4>
+                        <h4 id="album-name">Album Name</h4>
+                    </div>
+                    <p id="featured-song-duration">0:00</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; 2024 Meta U</p>
+    </footer>
+    <script src="data/data.js"></script>
+    <script src="featured.js"></script>
+</body>
+</html>
